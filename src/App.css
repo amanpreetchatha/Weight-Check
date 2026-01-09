@@ -1,0 +1,59 @@
+body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    background-color: #3f9;
+    color: #fff;
+    height: 100vh;
+}
+header{
+    background-color: #333;
+    order: 1;
+    display: flex;
+    justify-content: center;
+    font-size: x-large;
+    font-weight: 800;
+    padding: 1em;
+}
+nav{
+    background-color: #740;
+    order: 3;
+    display:flex;
+}
+main{
+    background-color: #444;
+    order: 2;
+    height: 100%;
+    padding: 2em;
+}
+@media screen and (min-width: 500px) {
+    nav{
+        order: 2;
+    }
+    main{
+        order: 3;
+    }
+}
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+button{
+    max-width: fit-content;
+    padding: 0.5em;
+    
+}
+input{
+    margin: 1em;
+    height: 1.5em;
+}
+li{
+    list-style-type: none;
+    margin: 1em;
+}
