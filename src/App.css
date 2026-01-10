@@ -46,7 +46,8 @@ form{
 }
 button{
     max-width: fit-content;
-    padding: 2em;    
+    padding-left: 1em;
+    padding-right: 1em;
 }
 input{
     margin: 1em;
