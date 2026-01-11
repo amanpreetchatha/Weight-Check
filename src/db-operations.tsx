@@ -1,14 +1,21 @@
 import { User } from "@supabase/supabase-js";
 import useUserContext from "./context";
+import supabase from "../utils/supabase";
 
 
 export function DbOperations(){
   
   
 }
-export function insertIntoDb(data: {}, user: User | undefined ){    
-
-  console.log("received data=",data);
-  console.log("user=", user);
+export async function insertIntoDb(receivedData: {}, user: User | undefined ){    
+  try{
+    
+    const {data} = await supabase.from('metrics').insert(receivedData).single();
+    if(data){
+      console.log("inserted into db", data);
+    }
+  }catch(e){
+    console.log(e);
+  }
 
 }
