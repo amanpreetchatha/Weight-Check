@@ -1,13 +1,17 @@
 import { useState } from "react";
-import { insertIntoDb } from "./dbOperations";
+import useUserContext from "./context";
+//import { insertIntoDb } from "./db-operations";
 
 function Dashboard(){
     const [enteredWeight, setEnteredWeight] = useState("");
+    const user=useUserContext();
     
     function handleSubmit(event: React.FormEvent<HTMLFormElement>){
         event.preventDefault();
         {
-            insertIntoDb({enteredWeight: enteredWeight});
+            //insertIntoDb({enteredWeight: enteredWeight});
+            console.log(user)
+            
         }
     }
     return(
@@ -20,4 +24,4 @@ function Dashboard(){
         </form>
     )
 }
-export default Dashboard;
+export default Dashboard; 
