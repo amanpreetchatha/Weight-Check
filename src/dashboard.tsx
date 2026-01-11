@@ -10,7 +10,7 @@ function Dashboard(){
     function handleSubmit(event: React.FormEvent<HTMLFormElement>){
         event.preventDefault();
         {
-            insertIntoDb({enteredWeight: enteredWeight});
+            insertIntoDb({enteredWeight: enteredWeight}, user);
             
             
         }

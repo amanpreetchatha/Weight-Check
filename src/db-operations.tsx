@@ -1,13 +1,13 @@
+import { User } from "@supabase/supabase-js";
 import useUserContext from "./context";
 
 
 export function DbOperations(){
   
-  const user=useUserContext();
+  
 }
-export function insertIntoDb(data: {}){    
+export function insertIntoDb(data: {}, user: User | undefined ){    
 
-  const user=useUserContext(); 
   console.log("received data=",data);
   console.log("user=", user);
 
